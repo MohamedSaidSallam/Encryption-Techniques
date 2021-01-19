@@ -6,12 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [v0.1.0] - 2021-01-03
+## [v0.1.1] - 2021-01-03
 
 ### Added
 
 - Inital Files
+- read files
 
-[Unreleased]: https://github.com/TheDigitalPhoenixX/Encryption Techniques/compare/v0.1.0...HEAD
-[v1.0.0]: https://github.com/TheDigitalPhoenixX/Encryption Techniques/compare/v0.3.0...v1.0.0
-[v0.1.0]: https://github.com/TheDigitalPhoenixX/Encryption Techniques/releases/tag/v0.1.0
+[Unreleased]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.1.0...HEAD
+[v1.0.0]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.3.0...v1.0.0
+[v0.1.0]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/releases/tag/v0.1.0

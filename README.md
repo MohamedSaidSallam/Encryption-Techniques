@@ -113,7 +113,7 @@ py -m encryption -i "input examples/Vigenere/vigenere_plain.txt" -o vigenere_fal
 
 ## Built With
 
-* [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
+- [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
 
 ## Contributing
 
@@ -125,7 +125,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Mohamed Said Sallam** - Main Dev - [TheDigitalPhoenixX](https://github.com/TheDigitalPhoenixX)
+- **Mohamed Said Sallam** - Main Dev - [TheDigitalPhoenixX](https://github.com/TheDigitalPhoenixX)
 
 See also the list of [contributors][github-contributors] who participated in this project and their work in [CONTRIBUTORS.md](CONTRIBUTORS.md).
 
@@ -135,7 +135,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* [README.md Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+- [README.md Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
 [license-image]: https://img.shields.io/badge/License-MIT-brightgreen.svg
 [license-url]: https://opensource.org/licenses/MIT

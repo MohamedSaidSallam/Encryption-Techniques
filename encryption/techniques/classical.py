@@ -103,3 +103,44 @@ def hillCipherEncrypt(input, param):
 
         output.append(currentOutput)
     return output
+
+
+playfairCipherEncryptParam = "key"
+
+
+def playfairCipherEncrypt(input, param):
+    key = []
+    for char in param[0]:
+        if(ord(char) not in key):
+            key.append(ord(char))
+
+    for i in range(26):
+        if i != 9 and (value := LOWERCASE_UNICODE_START+i) not in key:
+            key.append(value)
+    key = np.array(key).reshape([5, 5])
+
+    output = []
+    for line in input:
+        currentOutput = ''
+        line = line.strip()
+        plaintext = ''.join(
+            [(line[i] + ('x' if line[i] == line[i+1] else '') + line[i+1])
+             for i in range(0, len(line)-1, 2)])
+        plaintext += 'x' if len(plaintext) % 2 != 0 else ''
+
+        for i in range(0, len(plaintext), 2):
+            row1, col1 = tuple(map(int, np.where(
+                key == (ord(plaintext[i]) - (1 if plaintext[i] == 'j' else 0)))))
+            row2, col2 = tuple(map(int, np.where(
+                key == (ord(plaintext[i+1]) - (1 if plaintext[i+1] == 'j' else 0)))))
+            if(row1 == row2):
+                currentOutput += chr(int(key[row1][(col1+1) % 5])) + \
+                    chr(int(key[row2][(col2+1) % 5]))
+            elif(col1 == col2):
+                currentOutput += chr(int(key[(row1+1) % 5][col1])) + \
+                    chr(int(key[(row2+1) % 5][col2]))
+            else:
+                currentOutput += chr(int(key[row1][col2])) + \
+                    chr(int(key[row2][col1]))
+        output.append(currentOutput)
+    return output

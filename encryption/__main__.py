@@ -6,12 +6,14 @@ from encryption.techniques.classical import caesarCipherEncrypt, caesarCipherEnc
 from encryption.techniques.classical import vigenereCipherEncrypt, vigenereCipherEncryptParam
 from encryption.techniques.classical import vernamCipherEncrypt, vernamCipherEncryptParam
 from encryption.techniques.classical import hillCipherEncrypt, hillCipherEncryptParam
+from encryption.techniques.classical import playfairCipherEncrypt, playfairCipherEncryptParam
 
 encryptionTechniques = [
     (caesarCipherEncrypt, caesarCipherEncryptParam),
     (vigenereCipherEncrypt, vigenereCipherEncryptParam),
     (vernamCipherEncrypt, vernamCipherEncryptParam),
-    (hillCipherEncrypt, hillCipherEncryptParam)
+    (hillCipherEncrypt, hillCipherEncryptParam),
+    (playfairCipherEncrypt, playfairCipherEncryptParam)
 ]
 
 parser = argparse.ArgumentParser(

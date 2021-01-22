@@ -34,10 +34,16 @@ python -m encryption --help
 ```
 
 ```sh
-usage: __main__.py [-h] -i INPUT [-o OUTPUT]
+usage: __main__.py [-h] -i INPUT [-o OUTPUT] [--caesarCipherEncrypt]
+                   [--vigenereCipherEncrypt] [--vernamCipherEncrypt]
+                   [--hillCipherEncrypt] [--playfairCipherEncrypt]
+                   ...
 
 A simple python script that offers multiple simple impementation for
 encryption techniques.
+
+positional arguments:
+  algoParam
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -45,8 +51,26 @@ optional arguments:
                         Path to input file
   -o OUTPUT, --output OUTPUT
                         Path to output file. (default: output.txt)
+  --caesarCipherEncrypt
+                        selects 'caesarCipherEncrypt' as the encryption
+                        technique to use. (parameters: key size (shift),
+                        default: 3)
+  --vigenereCipherEncrypt
+                        selects 'vigenereCipherEncrypt' as the encryption
+                        technique to use. (parameters: mode(0: repeating, 1:
+                        auto), key)
+  --vernamCipherEncrypt
+                        selects 'vernamCipherEncrypt' as the encryption
+                        technique to use. (parameters: key)
+  --hillCipherEncrypt   selects 'hillCipherEncrypt' as the encryption
+                        technique to use. (parameters: key matrix (elements
+                        seperated by ',', e.g. 5,17,8,3))
+  --playfairCipherEncrypt
+                        selects 'playfairCipherEncrypt' as the encryption
+                        technique to use. (parameters: key)
 
 Source: https://github.com/TheDigitalPhoenixX/Encryption-Techniques
+
 ```
 
 ## Built With

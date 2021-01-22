@@ -50,3 +50,22 @@ def vigenereCipherEncrypt(input, param):
                                    startKey - startInput) % 26) + startInput)
         output.append(currentOutput)
     return output
+
+
+vernamCipherEncryptParam = "key"
+
+
+def vernamCipherEncrypt(input, param):
+    key = param[0]
+
+    output = []
+    for line in input:
+        currentOutput = ""
+        line = line.strip()
+
+        unicodeStart = getUnicodeStart(key[0])
+        for i in range(len(line)):
+            currentOutput += chr((((ord(line[i])-unicodeStart)
+                                   + (ord(key[i])-unicodeStart)) % 26)+unicodeStart)
+        output.append(currentOutput)
+    return output

@@ -4,10 +4,12 @@ import traceback
 from encryption.encryption import main
 from encryption.techniques.classical import caesarCipherEncrypt, caesarCipherEncryptParam
 from encryption.techniques.classical import vigenereCipherEncrypt, vigenereCipherEncryptParam
+from encryption.techniques.classical import vernamCipherEncrypt, vernamCipherEncryptParam
 
 encryptionTechniques = [
     (caesarCipherEncrypt, caesarCipherEncryptParam),
-    (vigenereCipherEncrypt, vigenereCipherEncryptParam)
+    (vigenereCipherEncrypt, vigenereCipherEncryptParam),
+    (vernamCipherEncrypt, vernamCipherEncryptParam)
 ]
 
 parser = argparse.ArgumentParser(

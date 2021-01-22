@@ -1,3 +1,5 @@
+import numpy as np
+
 UPPERCASE_UNICODE_START = ord('A')
 LOWERCASE_UNICODE_START = ord('a')
 
@@ -67,5 +69,37 @@ def vernamCipherEncrypt(input, param):
         for i in range(len(line)):
             currentOutput += chr((((ord(line[i])-unicodeStart)
                                    + (ord(key[i])-unicodeStart)) % 26)+unicodeStart)
+        output.append(currentOutput)
+    return output
+
+
+hillCipherEncryptParam = "key matrix (elements seperated by ',', e.g. 5,17,8,3)"
+
+
+def hillCipherEncrypt(input, param):
+    keyArray = list(map(lambda item: int(item), param[0].split(',')))
+    keyMatrixSize = 3 if len(keyArray) == 9 else 2
+    key = np.matrix([keyArray[(keyMatrixSize * i):(keyMatrixSize * i) +
+                              keyMatrixSize] for i in range(keyMatrixSize)])
+
+    output = []
+    for line in input:
+        currentOutput = ""
+        line = line.strip()
+
+        while(len(line) % keyMatrixSize != 0):
+            line += 'Z'
+
+        for i in range(0, len(line), keyMatrixSize):
+            inputMatrix = np.zeros([keyMatrixSize, 1])
+            for j in range(keyMatrixSize):
+                inputMatrix[j][0] = (
+                    ord(line[i+j]) - UPPERCASE_UNICODE_START) % 26
+
+            resultMatrix = key@inputMatrix
+            for value in resultMatrix:
+                currentOutput += chr(int(((value % 26) +
+                                          UPPERCASE_UNICODE_START).flat[0]))
+
         output.append(currentOutput)
     return output

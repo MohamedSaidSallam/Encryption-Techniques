@@ -73,6 +73,21 @@ Source: https://github.com/TheDigitalPhoenixX/Encryption-Techniques
 
 ```
 
+#### Run Example Input
+
+```sh
+py -m encryption -i "input examples/Caesar/caesar_plain.txt" -o caesar_3.txt --caesarCipherEncrypt 3
+py -m encryption -i "input examples/Caesar/caesar_plain.txt" -o caesar_6.txt --caesarCipherEncrypt 6
+py -m encryption -i "input examples/Caesar/caesar_plain.txt" -o caesar_12.txt --caesarCipherEncrypt 12
+py -m encryption -i "input examples/Hill/hill_plain_2x2.txt" -o hill_2x2.txt --hillCipherEncrypt 5,17,8,3
+py -m encryption -i "input examples/Hill/hill_plain_3x3.txt" -o hill_3x3.txt --hillCipherEncrypt 2,4,12,9,1,6,7,5,3
+py -m encryption -i "input examples/PlayFair/playfair_plain.txt" -o playfair_rats.txt --playfairCipherEncrypt rats
+py -m encryption -i "input examples/PlayFair/playfair_plain.txt" -o playfair_archangel.txt --playfairCipherEncrypt archangel
+py -m encryption -i "input examples/Vernam/vernam_plain.txt" -o vernam_txt --vernamCipherEncrypt SPARTANS
+py -m encryption -i "input examples/Vigenere/vigenere_plain.txt" -o vigenere_true.txt --vigenereCipherEncrypt 1 aether
+py -m encryption -i "input examples/Vigenere/vigenere_plain.txt" -o vigenere_false.txt --vigenereCipherEncrypt 0 pie
+```
+
 ## Built With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - Code Editor

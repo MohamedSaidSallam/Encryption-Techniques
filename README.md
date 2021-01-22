@@ -7,6 +7,7 @@ A simple python script that offers multiple simple implementations for encryptio
 
 Supported Encryption Techniques:
 
+- AES
 - DES
 - Playfair Cipher
 - Hill Cipher
@@ -61,7 +62,7 @@ Output:
 usage: __main__.py [-h] -i INPUT [-o OUTPUT] [--caesarCipherEncrypt]
                    [--vigenereCipherEncrypt] [--vernamCipherEncrypt]
                    [--hillCipherEncrypt] [--playfairCipherEncrypt]
-                   [--DESEncrypt] [--DESDecrypt]
+                   [--DESEncrypt] [--DESDecrypt] [--AESEncrypt] [--AESDecrypt]
                    ...
 
 A simple python script that offers multiple simple impementation for
@@ -97,6 +98,10 @@ optional arguments:
                         use. (parameters: key(16 Hex Chars), Number of rounds)
   --DESDecrypt          selects 'DESDecrypt' as the encryption technique to
                         use. (parameters: key(16 Hex Chars), Number of rounds)
+  --AESEncrypt          selects 'AESEncrypt' as the encryption technique to
+                        use. (parameters: Key (32 Hex characters))
+  --AESDecrypt          selects 'AESDecrypt' as the encryption technique to
+                        use. (parameters: Key (32 Hex characters))
 
 Source: https://github.com/TheDigitalPhoenixX/Encryption-Techniques
 ```
@@ -125,6 +130,13 @@ py -m encryption -i "input examples/des.txt" -o des_1.txt --DESEncrypt 000000000
 py -m encryption -i "input examples/des.txt" -o des_2.txt --DESEncrypt 0000000000000000 2
 py -m encryption -i "input examples/des_decrypt_1.txt" -o des_decrypt_1.txt --DESDecrypt 0000000000000000 1
 py -m encryption -i "input examples/des_decrypt_2.txt" -o des_decrypt_2.txt --DESDecrypt 0000000000000000 2
+```
+
+AES:
+
+```sh
+py -m encryption -i "input examples/aes.txt" -o aes.txt --AESEncrypt 0123456789ABCDEF0123456789ABCDEF
+py -m encryption -i "input examples/aes_decrypt.txt" -o aes_decrypt.txt --AESDecrypt 0123456789ABCDEF0123456789ABCDEF
 ```
 
 ## Built With

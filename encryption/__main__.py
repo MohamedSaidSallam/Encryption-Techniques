@@ -8,6 +8,7 @@ from encryption.techniques.classical import vernamCipherEncrypt, vernamCipherEnc
 from encryption.techniques.classical import hillCipherEncrypt, hillCipherEncryptParam
 from encryption.techniques.classical import playfairCipherEncrypt, playfairCipherEncryptParam
 from encryption.techniques.des import DESEncrypt, DESDecrypt, DESEncryptParam
+from encryption.techniques.aes import AESEncrypt, AESDecrypt, AESEncryptParam
 
 encryptionTechniques = [
     (caesarCipherEncrypt, caesarCipherEncryptParam),
@@ -17,6 +18,8 @@ encryptionTechniques = [
     (playfairCipherEncrypt, playfairCipherEncryptParam),
     (DESEncrypt, DESEncryptParam),
     (DESDecrypt, DESEncryptParam),
+    (AESEncrypt, AESEncryptParam),
+    (AESDecrypt, AESEncryptParam),
 ]
 
 parser = argparse.ArgumentParser(

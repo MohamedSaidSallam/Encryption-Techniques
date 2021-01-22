@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [v0.3.1] - 2021-01-22
+
+### Added
+
+- AES
+
 ## [v0.2.1] - 2021-01-22
 
 ### Added
@@ -24,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Initial Files
 - read files
 
-[Unreleased]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.3.1...HEAD
+[v0.3.1]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.2.1...v0.3.1
 [v0.2.1]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/compare/v0.1.7...v0.2.1
 [v0.1.7]: https://github.com/TheDigitalPhoenixX/Encryption-Techniques/releases/tag/v0.1.7

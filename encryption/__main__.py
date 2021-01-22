@@ -1,10 +1,13 @@
 import argparse
+import traceback
 
 from encryption.encryption import main
 from encryption.techniques.classical import caesarCipherEncrypt, caesarCipherEncryptParam
+from encryption.techniques.classical import vigenereCipherEncrypt, vigenereCipherEncryptParam
 
 encryptionTechniques = [
-    (caesarCipherEncrypt, caesarCipherEncryptParam)
+    (caesarCipherEncrypt, caesarCipherEncryptParam),
+    (vigenereCipherEncrypt, vigenereCipherEncryptParam)
 ]
 
 parser = argparse.ArgumentParser(
@@ -33,4 +36,4 @@ try:
          algorithmParam=args.algoParam)
 except Exception as ex:
     print('Exception Occured (common problem: make sure the algo param are correct):')
-    print(ex)
+    traceback.print_exc()

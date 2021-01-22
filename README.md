@@ -3,7 +3,7 @@
 [![GitHub Release][github_release_badge]][github_release_link]
 [![License][license-image]][license-url]
 
-A simple python script that offers multiple simple impementation for encryption techniques. Done as a project for ASU 2020, Computer and Network Security course.
+A simple python script that offers multiple simple implementations for encryption techniques. Done as a project for ASU 2020, Computer and Network Security course.
 
 Supported Encryption Techniques:
 

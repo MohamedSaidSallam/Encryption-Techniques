@@ -7,6 +7,7 @@ A simple python script that offers multiple simple implementations for encryptio
 
 Supported Encryption Techniques:
 
+- DES
 - Playfair Cipher
 - Hill Cipher
 - Vernam Cipher
@@ -60,6 +61,7 @@ Output:
 usage: __main__.py [-h] -i INPUT [-o OUTPUT] [--caesarCipherEncrypt]
                    [--vigenereCipherEncrypt] [--vernamCipherEncrypt]
                    [--hillCipherEncrypt] [--playfairCipherEncrypt]
+                   [--DESEncrypt] [--DESDecrypt]
                    ...
 
 A simple python script that offers multiple simple impementation for
@@ -91,12 +93,17 @@ optional arguments:
   --playfairCipherEncrypt
                         selects 'playfairCipherEncrypt' as the encryption
                         technique to use. (parameters: key)
+  --DESEncrypt          selects 'DESEncrypt' as the encryption technique to
+                        use. (parameters: key(16 Hex Chars), Number of rounds)
+  --DESDecrypt          selects 'DESDecrypt' as the encryption technique to
+                        use. (parameters: key(16 Hex Chars), Number of rounds)
 
 Source: https://github.com/TheDigitalPhoenixX/Encryption-Techniques
-
 ```
 
 #### Run Example Input
+
+Classical Ciphers:
 
 ```sh
 py -m encryption -i "input examples/Caesar/caesar_plain.txt" -o caesar_3.txt --caesarCipherEncrypt 3
@@ -109,6 +116,15 @@ py -m encryption -i "input examples/PlayFair/playfair_plain.txt" -o playfair_arc
 py -m encryption -i "input examples/Vernam/vernam_plain.txt" -o vernam_txt --vernamCipherEncrypt SPARTANS
 py -m encryption -i "input examples/Vigenere/vigenere_plain.txt" -o vigenere_true.txt --vigenereCipherEncrypt 1 aether
 py -m encryption -i "input examples/Vigenere/vigenere_plain.txt" -o vigenere_false.txt --vigenereCipherEncrypt 0 pie
+```
+
+DES:
+
+```sh
+py -m encryption -i "input examples/des.txt" -o des_1.txt --DESEncrypt 0000000000000000 1
+py -m encryption -i "input examples/des.txt" -o des_2.txt --DESEncrypt 0000000000000000 2
+py -m encryption -i "input examples/des_decrypt_1.txt" -o des_decrypt_1.txt --DESDecrypt 0000000000000000 1
+py -m encryption -i "input examples/des_decrypt_2.txt" -o des_decrypt_2.txt --DESDecrypt 0000000000000000 2
 ```
 
 ## Built With

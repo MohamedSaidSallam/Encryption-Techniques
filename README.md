@@ -5,6 +5,14 @@
 
 A simple python script that offers multiple simple impementation for encryption techniques. Done as a project for ASU 2020, Computer and Network Security course.
 
+Supported Encryption Techniques:
+
+- Playfair Cipher
+- Hill Cipher
+- Vernam Cipher
+- Vigenere Cipher
+- Ceasar Cipher
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -32,6 +40,21 @@ you can get the list of paramters using the following:
 ```sh
 python -m encryption --help
 ```
+
+or
+
+```sh
+venv\Scripts\python.exe -m encryption --help
+```
+
+or
+
+```sh
+venv/Scripts/activate
+python -m encryption --help
+```
+
+Output:
 
 ```sh
 usage: __main__.py [-h] -i INPUT [-o OUTPUT] [--caesarCipherEncrypt]
